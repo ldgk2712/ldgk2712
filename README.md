@@ -13,8 +13,8 @@
 - 🌐 Explore my full portfolio: [GiaKhanh.AI](https://ldgk2712.github.io)
 
 ## 🏆 Achievements 🌷
-- **Meritorious Award @ SCUDEM IX 2024** — Developed and validated a spear penetration depth model using Newton's Law
-- **Academic Scholarships @ VNUHCM-US** — Excellent Student (Sem 1, 23-24) & Good Student (Sem 2, 22-23)
+- **Meritorious Award @ SCUDEM IX 2024** - Developed and validated a spear penetration depth model using Newton's Law
+- **Academic Scholarships @ VNUHCM-US** - Excellent Student (Sem 1, 23-24) & Good Student (Sem 2, 22-23)
 - **Certifications**: Master Analytical Thinking & PowerBI, HackerRank Advanced SQL, Python for Data Analytics
 
 ## 🛠️ Languages and Tools 🪄
@@ -32,6 +32,7 @@
 
 ## 🚀 Featured Projects 💖
 
+<!-- featured-projects:start -->
 <p align="center">
   <a href="https://github.com/ldgk2712/E-Commerce-Customer-Segmentation">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=ldgk2712&repo=E-Commerce-Customer-Segmentation&bg_color=ffe4e1&title_color=ff1493&text_color=c71585&icon_color=ff69b4&border_color=ffb6c1" />
@@ -40,6 +41,7 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=ldgk2712&repo=VietNam-HighSchool-Exam-Analysis-2025&bg_color=ffe4e1&title_color=ff1493&text_color=c71585&icon_color=ff69b4&border_color=ffb6c1" />
   </a>
 </p>
+<!-- featured-projects:end -->
 
 **📊 External Dashboards & Reports:**
 1. **[Marketing Campaign Performance (Power BI) 🎀](https://drive.google.com/file/d/1MiwFV8tBP-looeBC5rINd6ptX44fmxN2/view?usp=sharing)**
@@ -57,4 +59,4 @@
 </p>
 
 ## 🤝 Connect with Me 💌
-💌 Feel free to explore my projects or reach out for collaboration — always happy to connect! Available for Internships in 2026.
+💌 Feel free to explore my projects or reach out for collaboration - always happy to connect! Available for Internships in 2026.

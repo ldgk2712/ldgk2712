@@ -1,50 +1,64 @@
-import requests
-import os
+from pathlib import Path
 
-# Cấu hình
+import requests
+
 USERNAME = "ldgk2712"
-# API lấy danh sách public repo, sắp xếp theo thời gian tạo mới nhất
 URL = f"https://api.github.com/users/{USERNAME}/repos?sort=created&direction=desc"
+README_PATH = Path(__file__).resolve().parent / "README.md"
+START_TAG = "<!-- featured-projects:start -->"
+END_TAG = "<!-- featured-projects:end -->"
+MAX_PROJECTS = 5
+
 
 def fetch_repos():
-    response = requests.get(URL)
-    if response.status_code == 200:
-        repos = response.json()
-        # Chỉ lấy 5 dự án mới nhất và không phải là repo profile này
-        return [r for r in repos if r['name'] != USERNAME][:5]
-    return []
+    response = requests.get(URL, timeout=15)
+    response.raise_for_status()
 
-def update_readme():
-    repos = fetch_repos()
-    project_html = ""
-    
-    # Tạo mã HTML theo phong cách "cute hồng" đã thống nhất
+    repos = response.json()
+    public_repos = [
+        repo
+        for repo in repos
+        if repo.get("name") != USERNAME and not repo.get("fork", False)
+    ]
+    return public_repos[:MAX_PROJECTS]
+
+
+def build_project_html(repos):
+    if not repos:
+        return '<p align="center"><i>No public projects to feature right now.</i></p>'
+
+    cards = []
     for repo in repos:
-        name = repo['name']
-        desc = repo['description'] or "No description provided ✨"
-        url = repo['html_url']
-        project_html += f"""
-<p align="center">
+        name = repo["name"]
+        url = repo["html_url"]
+        cards.append(
+            f"""<p align="center">
   <a href="{url}">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username={USERNAME}&repo={name}&bg_color=ffe4e1&title_color=ff1493&text_color=c71585&icon_color=ff69b4&border_color=ffb6c1" />
   </a>
-</p>
-"""
+</p>"""
+        )
+    return "\n".join(cards)
 
-    with open("README.md", "r", encoding="utf-8") as f:
-        content = f.read()
 
-    # Thay thế nội dung giữa 2 thẻ anchor
-    start_tag = ""
-    end_tag = ""
-    
-    start_idx = content.find(start_tag) + len(start_tag)
-    end_idx = content.find(end_tag)
-    
-    new_content = content[:start_idx] + "\n" + project_html + "\n" + content[end_idx:]
+def replace_section(content, replacement):
+    start_idx = content.find(START_TAG)
+    end_idx = content.find(END_TAG)
 
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(new_content)
+    if start_idx == -1 or end_idx == -1 or start_idx >= end_idx:
+        raise ValueError("Featured projects markers are missing or invalid in README.md")
+
+    section_start = start_idx + len(START_TAG)
+    return content[:section_start] + "\n" + replacement + "\n" + content[end_idx:]
+
+
+def update_readme():
+    repos = fetch_repos()
+    project_html = build_project_html(repos)
+    content = README_PATH.read_text(encoding="utf-8")
+    new_content = replace_section(content, project_html)
+    README_PATH.write_text(new_content, encoding="utf-8")
+
 
 if __name__ == "__main__":
     update_readme()
