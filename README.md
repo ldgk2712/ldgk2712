@@ -31,7 +31,6 @@
 </p>
 
 ## 🚀 Featured Projects 💖
-*(Thẻ Repo dưới đây sẽ tự động cập nhật [Auto-update] trạng thái từ mã nguồn của bạn)*
 
 <p align="center">
   <a href="https://github.com/ldgk2712/E-Commerce-Customer-Segmentation">
