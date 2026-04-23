@@ -11,7 +11,7 @@
     </a>
   </p>
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=500&size=16&pause=1000&color=FF1493&center=true&vCenter=true&width=500&lines=Turning+data+into+actionable+insights;Python,+SQL,+Power+BI,+Tableau;Final-year+Math+%26+CS+Student" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=500&size=16&pause=1000&color=FF1493&center=true&vCenter=true&width=500&lines=Turning+data+into+actionable+insights;Python,+SQL,+Power+BI,+Tableau;Final-year+Data+Science+Student" alt="Typing SVG" />
 </div>
 
 ---
