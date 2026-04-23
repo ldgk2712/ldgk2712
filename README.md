@@ -52,6 +52,8 @@
   <h2>📈 GitHub Overview 🪄</h2>
   <p>
     <img src="https://github-readme-stats.vercel.app/api?username=ldgk2712&show_icons=true&bg_color=ffe4e1&title_color=ff1493&text_color=c71585&icon_color=ff69b4&border_color=ffb6c1" height="192px" alt="GitHub Stats" />
+    <br />
+    <br />
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ldgk2712&layout=compact&bg_color=ffe4e1&title_color=ff1493&text_color=c71585&icon_color=ff69b4&border_color=ffb6c1" height="192px" alt="Top Languages" />
   </p>
 </div>
