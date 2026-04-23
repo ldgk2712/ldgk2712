@@ -133,10 +133,10 @@
   <p>Feel free to explore my projects or reach out for collaboration - always happy to connect!<br><i>Available for Internships in 2026.</i></p>
   
   <p>
-    <a href="mailto:your.email@example.com" target="_blank">
+    <a href="mailto:giakhanh.analytics@gmail.com" target="_blank">
       <img src="https://img.shields.io/badge/Email-059669?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
     </a>
-    <a href="https://linkedin.com/in/your-profile" target="_blank">
+    <a href="https://linkedin.com/in/ledanggiakhanh" target="_blank">
       <img src="https://img.shields.io/badge/LinkedIn-0f172a?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
   </p>
